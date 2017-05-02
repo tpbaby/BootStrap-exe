@@ -1,0 +1,167 @@
+  .regist{
+            display: flex;
+            flex-flow: row wrap;
+
+            align-content: center;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        
+        .registmsg{/*
+            margin-left: -150px;*/
+            background-color: #f2f2f2;
+            width: 100%;
+            height: auto;
+            margin: 0px 10%;
+            border: 1px solid lightgray;
+            
+        }
+        
+        .registmsg h3{
+            text-align: center;
+            color: #4a4a4a;
+            text-shadow: 1px 1px 3px lightgray;
+        }
+        
+        .registmsg span{
+            float: right;
+            margin-right: 10%;
+        }
+        
+        .registmsg form{
+            width: 100%;
+            height: auto;
+            margin: 40px auto;
+            
+        }
+        
+        .registmsg .formright input, .registmsg .formright select{
+            margin: 10px auto;
+            width: 200px;
+            height: 30px;
+        }
+        
+       
+        
+        .formright{/*
+            border: 1px solid pink;*/
+            width: 40%;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .formleft{
+            display: inline-block;/*
+            border: 1px solid lightgray;*/
+            width: 30%;
+            position: relative;
+            top: -240px;
+            text-align: center;
+        }
+        
+        
+        .imgplace{/*
+            float: right;*/
+            margin: 10px auto;
+            width: 200px;
+            height: 200px;
+            border: 1px solid lightgray;
+        }
+     
+        .tophr{
+            margin: auto;
+            width: 80%;
+            height: 1px;
+            margin-top: 50px;
+            z-index: 100;
+            background-color: gray;
+        }
+        
+        .hr1{
+            margin: auto;
+            width: 80%;
+            height: 1px;
+            background-color: gray;
+            margin-top: -120px;
+        }
+        
+        .submitbtn{
+            margin-top: 20px;
+            margin-left: 80%;
+        }
+        
+        /*-----联系我们----*/
+        
+        .callus{
+            width: 25%;
+            height: auto;/*
+            border: 1px solid red;*/
+            display: inline-block;
+            position: relative;
+            top: -30px;
+        }
+        
+        .chatmsg{
+            width: 100%;
+            height: auto;
+            margin: 10px auto;
+        }
+    
+        .call_msg{
+            color: black;
+            font-size: 20px;
+        }
+        
+        
+        /*----------媒体自适应-----------*/
+        
+        @media screen and (min-width: 768px) and (max-width: 992px){
+            .formright{
+                width: 50%;
+            }
+            
+            .formleft{
+                width: 48%;
+            }
+            
+            .callus{
+                width: 100%;
+                position: relative;
+                top: -140px;
+                text-align: center;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .formright{
+                width: 100%;
+                position: relative;
+                top: -260px;
+            }
+            
+            .formleft{
+                width: 100%;
+                position: relative;
+                top: 310px;
+            }
+            
+            .callus{
+                width: 100%;
+                position: relative;
+                top: 40px;
+                text-align: center;
+            }
+            
+            .hr1{
+                margin: auto;
+                width: 80%;
+                height: 1px;
+                background-color: gray;
+                margin-top: 40px;
+            }
+            
+            .submitbtn{
+                margin-top: 20px;
+                margin-left: 50%;
+            }
+        }

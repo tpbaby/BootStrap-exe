@@ -1,0 +1,44 @@
+.aboutus h3{
+    margin-top: 120px;
+}
+
+.divmargin{
+    margin-top: 30px;
+}
+
+.spanmsg{
+    font-size: 20px;
+    color: #2058ac;
+    
+}
+
+.divstyle{
+    
+}
+
+.divstyle img{
+    width: 420px;
+    height: 280px;
+    margin-top: 20px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.msgstyle{
+    margin-top: 50px;
+    height: 280px;
+}
+
+.smallmsg{
+    text-align: right;
+}
+
+.secondmsg{
+    text-align: right;
+}
+
+.secondmsg img{
+    float: right;
+}
+
+

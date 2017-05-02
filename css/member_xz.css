@@ -1,0 +1,194 @@
+
+
+
+/*魔方转动动画*/
+
+        *{
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			
+			/* transform-style: flat | preserve-3d*/
+        	/* perspective(800px) */
+        
+        section{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            position: absolute;
+            top: 80px;
+            
+            
+            display: flex;
+            flex-flow: wrap row;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .movemsg{
+            text-align: center;
+            font-size: 28px;
+            font-family: "幼圆";
+            font-weight: 600;
+            color: darkblue;
+            display: block;
+            width: 100%;
+            margin-top: -100px;
+            
+        }
+        	
+        	.cube{
+                z-index: 2000;
+        		width: 300px;
+        		height: 300px;
+        		text-align: center;
+        		line-height: 300px;
+        		transform-style: preserve-3d;
+        		/*不能加这一句，否则动画不能执行*/
+        		/*transform: perspective(800px);*/
+        		
+        		transition: transform 20s linear 0s; 
+        		/*transform: rotateX(30deg);*/
+        		background-color: rgba(65, 237, 37, 0);
+        		position: relative;
+                margin-top: -300px;
+        	}
+        	
+        	.cube:hover{
+				transform: rotate3d(1,1,1,360deg);
+			}
+        	
+        	.cube .c_son{
+        		width: 300px;
+        		height: 300px;
+        		position: absolute;
+        		left: 0px;
+        		top: 0px;
+        	}
+        	
+        	.cube img{
+        		width: 100%;
+        		height: 100%;
+        		opacity: 0.8;
+        	}
+        	
+        	.c_son:nth-child(1){
+        		
+				background-color: rgba(237,202,37,0.3);
+        		/*前面*/
+        		transform: translateZ(-150px);
+        	}
+        	
+        	.c_son:nth-child(2){
+        		
+        		
+				background-color: rgba(237,202,37,0.3);
+        		/*后面*/
+        		transform: translateZ(150px);
+        	}
+        	
+        	.c_son:nth-child(3){
+        		
+				background-color: rgba(178,37,237,0.3);
+				/*左边*/
+        		transform: translateX(-150px) rotateY(90deg);
+				
+        	}
+        	
+        	.c_son:nth-child(4){
+        		
+				background-color: rgba(178,37,237,0.3);
+				/*右边*/
+        		transform: translateX(150px) rotateY(90deg);
+				
+        	}
+        	
+        	.c_son:nth-child(5){
+        		
+        		
+				background-color: rgba(1237,70,37,0.3);
+				/*上边*/
+        		transform: translateZ(-2.7px) translateY(-148px) rotateX(90deg);
+				
+        	}
+        	
+        	.c_son:nth-child(6){
+        		
+				background-color: rgba(1237,70,37,0.3);
+				/*下边*/
+        		transform:  translateZ(-2.7px) translateY(152px) rotateX(90deg);
+				
+        	}
+
+            .menban{
+                display: flex;
+                /*flex-flow: wrap;*/
+                justify-content: center;
+                align-items: center;
+            }
+        	
+        	.bg{
+                z-index: 2000;
+        		width: 100%;
+        		height: 100%;
+        		/*这个一定要有*/
+        		position: fixed;
+        		left: 0px;
+        		top: 0px;
+        		opacity: 0.6;
+        		background-color: dimgrey;
+        		display: none;
+        	}
+        	
+            .putimg{
+                z-index: 2000;
+        		width: 60%;
+        		height: 60%;
+        		background-color: lightgray;
+        		position: fixed;
+                left:20%;
+                margin-top: -200px;
+                /*
+        		margin: 0 auto;*/
+                
+                /*margin-left: auto;
+        		margin-right: auto;*/
+        		font-size: 20px;
+        		display: none;
+        	}
+        	
+        	.close{
+        		background: lightgray;
+        		width: 25px;
+        		height: 25px;
+        		text-align: center;
+        		line-height: 25px;
+        		position: absolute;
+        		right: 0px;
+        		border-radius: 50%;
+        		cursor: pointer;
+                color: black
+        	}
+        	
+        	.putimg img{
+        		width: 100%;
+        		height: 100%;
+        	}
+        
+            @media screen and (min-width: 768px) and (max-width: 992px) {
+                .putimg{
+                    width: 80%;
+                    left:10%;
+                    margin-top: -200px;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                .putimg{
+                    width: 90%;
+                    height: 50%;
+                    left:5%;
+                }
+            }
